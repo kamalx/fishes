@@ -6,6 +6,7 @@ class StorePicker extends React.Component {
         console.log("You changed the URL to {how would you get this value?}");
         event.preventDefault();
         // first: grab the text from the box
+        console.log(this.storeInput); // to see if we can access the newly added ref
         // second: we're going to transition from / to /store/:storeId
     }
 
@@ -22,7 +23,9 @@ class StorePicker extends React.Component {
                 inside it too!
             */}
                 <h2>Please Enter A Store...</h2>
-                <input type="text" required placeholder='Store Name' defaultValue={ getFunName() } />
+                <input type="text" required placeholder='Store Name'
+                       defaultValue={ getFunName() }
+                       ref={(input) => {this.storeInput = input} } />
                 <button type="submit">Visit Store</button>
             </form>
         )
