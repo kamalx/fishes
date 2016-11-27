@@ -2,11 +2,18 @@ import React from 'react';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
+    goToStore(event) {
+        console.log("You changed the URL to {how would you get this value?}");
+        event.preventDefault();
+        // first: grab the text from the box
+        // second: we're going to transition from / to /store/:storeId
+    }
+
     render() {
         // return some jsx
         // Let's enter some jsx comments
         return (
-            <form className="store-selector">
+            <form className="store-selector" onSubmit={ this.goToStore } >
             {/*
                 This weird abomination is a jsx comment!
 
