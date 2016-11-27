@@ -1,5 +1,4 @@
 import React from 'react';
-import {render} from 'react-dom';
 
 // Converted this into a stateless functional component
 // REF: https://facebook.github.io/react/docs/components-and-props.html
