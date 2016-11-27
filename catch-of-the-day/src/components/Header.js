@@ -6,7 +6,12 @@ class Header extends React.Component {
         return (
             <header className="top">
                 <h1>Catch of the Day</h1>
-                <h3 className="tagline">Fill me in</h3>
+            {/*
+            `this` is the component.
+            `props` is the object.
+            `tagline` is the variable we wish to access.
+            */}
+                <h3 className="tagline">{this.props.tagline}</h3>
             </header>
         )
     }
