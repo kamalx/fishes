@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Header from './Header.js';
+import Header from './Header';
+import Order from './Order';
+import Inventory from './Inventory';
 
 class App extends React.Component {
     render() {
@@ -11,6 +13,8 @@ class App extends React.Component {
                     { /* scaffold for the app */ }
                     <Header />
                 </div>
+                <Order/>
+                <Inventory/>
             </div>
         )
     }
