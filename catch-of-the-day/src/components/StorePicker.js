@@ -2,8 +2,16 @@ import React from 'react';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
+    constructor() {
+        super();
+        // following weirdness is required to access `this` from within our
+        // custom functions like our goToStore() function here.
+        // #11 talks about this in detail.
+        this.goToStore = this.goToStore.bind(this);
+    }
+
     goToStore(event) {
-        console.log("You changed the URL to {how would you get this value?}");
+        console.log("You changed the URL to " + this.storeInput.value);
         event.preventDefault();
         // first: grab the text from the box
         console.log(this.storeInput); // to see if we can access the newly added ref
