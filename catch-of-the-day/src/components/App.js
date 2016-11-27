@@ -7,6 +7,7 @@ class App extends React.Component {
             <div className="catch-of-the-day">
                 <div className="menu">
                     { /* scaffold for the app */ }
+                    <Header />
                 </div>
             </div>
         )
