@@ -23,7 +23,7 @@ class App extends React.Component {
         fishes[`fish-${timestamp}`] = fish;
 
         // set state
-        this.setState({ fishes: fishes });
+        this.setState({ fishes });
     }
 
     render() {
