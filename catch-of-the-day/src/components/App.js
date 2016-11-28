@@ -37,7 +37,7 @@ class App extends React.Component {
                     <Header tagline="Fresh Sea Food Market" />
                 </div>
                 <Order/>
-                <Inventory/>
+                <Inventory addFish={this.addFish} />
             </div>
         )
     }
