@@ -18,11 +18,14 @@ class StorePicker extends React.Component {
         //  https://www.sitepoint.com/bind-javascripts-this-keyword-react/
         //  https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind
         // ---------
-        console.log("You changed the URL to " + this.storeInput.value);
+
         event.preventDefault();
         // first: grab the text from the box
-        console.log(this.storeInput); // to see if we can access the newly added ref
+        const storeId = this.storeInput.value;
+        console.log("You changed the URL to " + storeId);
+
         // second: we're going to transition from / to /store/:storeId
+        this.context.router.transitionTo(`/store/${storeId}`);
     }
 
     render() {
@@ -45,6 +48,17 @@ class StorePicker extends React.Component {
             </form>
         )
     }
+}
+
+// We're going to set some data in the context so that it's available globally
+// to the entire application. This is not recommended and should be done with
+// careful thought as globals are bad. But setting up the router, the instructions
+// in #12 go straight to setting up this context.
+// TODO: read more about context here:
+//   - https://facebook.github.io/react/docs/context.html
+
+StorePicker.contextTypes = {
+    router: React.PropTypes
 }
 
 export default StorePicker;
