@@ -11,6 +11,13 @@ class StorePicker extends React.Component {
     }
 
     goToStore(event) {
+        // the keyword `this` is accessible here AND refers to the StorePicker
+        // class as expected because of the above call to .bind() in the
+        // constructor() function.
+        // Read more about it:
+        //  https://www.sitepoint.com/bind-javascripts-this-keyword-react/
+        //  https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+        // ---------
         console.log("You changed the URL to " + this.storeInput.value);
         event.preventDefault();
         // first: grab the text from the box
