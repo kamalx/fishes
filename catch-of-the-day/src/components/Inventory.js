@@ -7,6 +7,8 @@ class Inventory extends React.Component {
             <div>
                 <p>Inventory</p>
                 <AddFishForm addFish={this.props.addFish} />
+                { /* "loadSamples() method should go where our state lives" */ }
+                <button onClick={this.props.loadSamples}>Load Sample Fishes</button>
             </div>
         )
     }
