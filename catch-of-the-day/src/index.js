@@ -9,9 +9,7 @@ import StorePicker from './components/StorePicker';
 import NotFound from './components/NotFound';
 
 // We're adding the router component right here instead of in a new file
-// for now.
-// This is a stateless functional component like the one we saw in just previous
-// commit.
+// for now. This is a stateless functional component.
 const Root = () => {
     return (
         <BrowserRouter>
