@@ -57,6 +57,10 @@ class App extends React.Component {
                     <Header tagline="Fresh Sea Food Market" />
                     <ul className="list-of-fish">
                         {
+                            // {/* `key` is passed down but not used in downstream
+                            // components, so we use `index` instead - `key` is
+                            // apparently used by React internally and not
+                            // accessible as a `prop` */}
                             Object
                                 .keys(this.state.fishes)
                                 .map(key => <Fish key={key}
@@ -66,7 +70,7 @@ class App extends React.Component {
                         }
                     </ul>
                 </div>
-                <Order/>
+                <Order fishes={this.state.fishes} order={this.state.order} />
                 <Inventory addFish={this.addFish} loadSamples={this.loadSamples} />
             </div>
         )
