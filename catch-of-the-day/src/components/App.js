@@ -16,8 +16,8 @@ class App extends React.Component {
         this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
 
-        if(base) {
-            console.log("Loaded firebase configuration successfully.");
+        if(typeof base !== 'undefined') {
+            console.log("Loaded firebase configuration.");
             console.log("The firebase component exposes this object for use: ", base);
         }
 
