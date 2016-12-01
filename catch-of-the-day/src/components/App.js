@@ -6,6 +6,8 @@ import Inventory from './Inventory';
 import Fish from './Fish';
 import sampleFishes from '../sample-fishes';
 
+import base from '../base';
+
 class App extends React.Component {
     constructor() {
         super();
@@ -13,6 +15,11 @@ class App extends React.Component {
         this.addFish = this.addFish.bind(this);
         this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
+
+        if(base) {
+            console.log("Loaded firebase configuration successfully.");
+            console.log("The firebase component exposes this object for use: ", base);
+        }
 
         // getInitialState
         this.state = {
