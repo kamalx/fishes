@@ -18,7 +18,7 @@ class App extends React.Component {
 
         if(typeof base !== 'undefined') {
             console.log("Loaded firebase configuration.");
-            console.log("The firebase component exposes this object for use: ", base);
+            console.log("The re-base component exposes this object for use: ", base);
         }
 
         // getInitialState
